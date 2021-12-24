@@ -1,0 +1,24 @@
+{
+  "name": "trolling-scammers",
+  "version": "1.0.0",
+  "description": "Scammers can go to the nether without any gear",
+  "main": "troll_puppeteer.js",
+  "scripts": {
+	"start": "node troll_puppeteer.js",
+    "test": "echo No tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pythonmcpi/trolling-scammers.git"
+  },
+  "author": "pipythonmc",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/pythonmcpi/trolling-scammers/issues"
+  },
+  "homepage": "https://github.com/pythonmcpi/trolling-scammers#readme",
+  "private": true,
+  "dependencies": {
+    "puppeteer": "^13.0.1"
+  }
+}
