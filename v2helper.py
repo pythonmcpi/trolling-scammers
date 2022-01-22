@@ -13,16 +13,23 @@ __all__ = [
     'get_fake_first_name',
     'get_fake_last_name',
     'get_fake_name',
-    "get_fake_username"
+    'get_fake_username',
+    'get_fake_email'
 ]
 
 def get_fake_password(length: int = 16) -> str:
     letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()`~-=_+[]{}\\|/?,.<>'
-    return ''.join(random.choice(letters) for i in range(length))
+    return ''.join(choice(letters) for i in range(length))
 
 def get_fake_token(length: int = 57) -> str:
     letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-    return ''.join(random.choice(letters) for i in range(length))
+    return ''.join(choice(letters) for i in range(length))
+
+def get_fake_email(domain: str = None) -> str:
+    letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_.'
+    if domain is None:
+        domain = choice(["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "mail.com"])
+    return "".join(choice(letters) for i in range(randint(5, 30))) + '@' + domain
 
 with open("1names.txt", "r") as f:
     first_names = [l.strip() for l in f.readlines()]
@@ -50,7 +57,7 @@ def get_fake_username() -> str:
     
     fn, ln = get_fake_first_name(), get_fake_last_name()
     
-    if v6) == 1:
+    if v6 == 1:
         pf, sf = "Xx", "xX"
     elif v6 == 2:
         pf, sf = "xXx", "xXx"
